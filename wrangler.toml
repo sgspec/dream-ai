@@ -4,7 +4,7 @@ compatibility_date = "2026-11-01"
 
 [[kv_namespaces]]
 binding = "DREAM_KV"
-id = "วาง id จริงตรงนี้"
+id = "ac3646344bfc40f0b0ea2c08d092c2d5"
 
 [vars]
 GEMINI_MODEL = "gemini-3.1-flash-lite"
