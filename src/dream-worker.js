@@ -11,7 +11,7 @@ const CONFIG = {
   appUrl: "https://lekhuay.com",
   lineUrl: "https://line.me/R/ti/p/@yourline",
   telegramUrl: "https://t.me/yourgroup",
- allowedHosts: ["lekhuay.com", "www.lekhuay.com", "floralwhite-cod-921974.hostingersite.com"],
+allowedHosts: ["lekhuay.com", "www.lekhuay.com", "floralwhite-cod-921974.hostingersite.com", "rrmanmakk.online", "www.rrmanmakk.online", "nksupnk.online", "www.nksupnk.online"],
   defaultModel: "gemini-3.1-flash-lite",
   cacheVersion: "v2",
   maxLen: 120,
