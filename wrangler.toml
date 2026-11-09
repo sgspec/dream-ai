@@ -1,0 +1,10 @@
+name = "dream-ai"
+main = "dream-worker.js"
+compatibility_date = "2026-11-01"
+
+[[kv_namespaces]]
+binding = "DREAM_KV"
+id = "ใส่ id ของ KV เดิม"
+
+[vars]
+GEMINI_MODEL = "gemini-3.1-flash-lite"
