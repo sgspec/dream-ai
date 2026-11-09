@@ -11,7 +11,7 @@ const CONFIG = {
   appUrl: "https://lekhuay.com",
   lineUrl: "https://line.me/R/ti/p/@yourline",
   telegramUrl: "https://t.me/yourgroup",
-    allowedHosts: ["lekhuay.com", "www.lekhuay.com", "floralwhite-cod-921974.hostingersite.com"],
+ allowedHosts: ["lekhuay.com", "www.lekhuay.com", "floralwhite-cod-921974.hostingersite.com"],
   defaultModel: "gemini-3.1-flash-lite",
   cacheVersion: "v2",
   maxLen: 120,
@@ -81,7 +81,10 @@ function json(data, status, request, url) {
 
 // ---------- API ----------
 async function handleDream(request, env, url) {
-  if (!isAllowed(request, url)) return json({ error: "Forbidden" }, 403, request, url);
+  const ok = env.DAI_SECRET
+    ? request.headers.get("x-dai-key") === env.DAI_SECRET
+    : isAllowed(request, url);
+  if (!ok) return json({ error: "Forbidden" }, 403, request, url);
 
   const dream = (url.searchParams.get("dream") || "").trim().slice(0, CONFIG.maxLen);
   if (dream.length < 2) return json({ error: "กรุณาพิมพ์ความฝันอย่างน้อย 2 ตัวอักษร" }, 400, request, url);
