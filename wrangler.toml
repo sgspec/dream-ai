@@ -1,5 +1,5 @@
 name = "dream-ai"
-main = "dream-worker.js"
+main = "src/dream-worker.js
 compatibility_date = "2026-11-01"
 
 [[kv_namespaces]]
